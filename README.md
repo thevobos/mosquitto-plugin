@@ -52,21 +52,29 @@ Mosquitto-auth plugin MySQL tables
 Install the mosquitto from Ubuntu’s software repository.
 
 Update the package information
+
+
 sudo apt update
+
+
 2. Install the mosquitto package.
 
 sudo apt install -y mosquitto
+
 3. Stop the mosquitto service
 
 sudo systemctl stop mosquitto
+
 4. Download mosquitto-auth.so file (Download)
 
 5. Edit mosquitto.conf file
 
 sudo vi /etc/mosquitto/mosquitto.conf
+
 And add the following entries to the mosquitto.conf file.
 
 plugin /path/to/mosquitto_auth.so
+
 #listener 1883
 The mosquitto allows remote connections by adding a listener port.
 
@@ -81,6 +89,7 @@ DB_PASSWORD="Pass"
 Move .env file to /
 
 mv /path/to/.env /.env
+
 Start the mosquitto server
 
 sudo systemctl start mosquitto
